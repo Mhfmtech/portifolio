@@ -15,7 +15,7 @@
 
                 <v-col v-if="intBreakPoint > 2" cols="6" md="9" style="align-items: end; display: flex;">
                     <v-spacer class="DisableMobile" style="width: 70px"></v-spacer>
-                    <div  style="display: contents">
+                    <div style="display: contents">
                         <v-btn @click="goto('id1')" class="FontMenu btnMenu" style="">
                             PRODUTOS
                         </v-btn>
@@ -35,7 +35,9 @@
         <v-row class="pt1 padMobile" justify="center" align="center" style="padding: 0 65px">
             <v-col offset="8" cols="12" md="4">
                 <div style="background-color: #fff; padding: 20px; border-radius: 20px">
-                    <h1 style="font-family: Montsserat !important; color: #C79026; font-weight: 600; text-align: center; line-height: 1;">CONFIRA <br> NOSSA COLEÇÃO</h1>
+                    <h1
+                        style="font-family: Montsserat !important; color: #C79026; font-weight: 600; text-align: center; line-height: 1;">
+                        CONFIRA <br> NOSSA COLEÇÃO</h1>
                     <v-form>
                         <v-text-field v-model="contato.nome" label="Nome"></v-text-field>
                         <v-text-field v-model="contato.email" label="E-mail"></v-text-field>
@@ -51,12 +53,14 @@
         </v-row>
 
         <v-row class="textureBar padMobile" justify="center" align="center">
-            <h1 class="lineHeightMob" style="color: #fff; font-family: Montsserat; font-weight: 600">Cada história é uma joia. Escolha como
+            <h1 class="lineHeightMob" style="color: #fff; font-family: Montsserat; font-weight: 600">Cada história é uma
+                joia. Escolha como
                 eternizar a sua!</h1>
         </v-row>
 
         <v-row class="padMobile" style=" padding: 50px 65px" ref="id1">
-            <h1 class="lineHeightMob" style="font-family: Montsserat; font-weight: 400;  color: #000">Produtos personalizados</h1>
+            <h1 class="lineHeightMob" style="font-family: Montsserat; font-weight: 400;  color: #000">Produtos
+                personalizados</h1>
 
             <v-col cols="12" md="12">
                 <v-sheet class="mx-auto" style="background-color: transparent !important" max-width="100%">
@@ -78,13 +82,15 @@
             </v-col>
         </v-row>
         <div style="height: 70px" ref="id2"></div>
-        <v-row  class="padMobile" justify="center" align="center">
+        <v-row class="padMobile" justify="center" align="center">
             <v-col class="cardBgc" style="border-radius: 20px" cols="12" md="10">
                 <v-row class="padMobile" style="padding: 50px; min-height: 435px">
                     <v-col cols="12" md="8">
-                        <h1 class="lineHeightMob" style="font-family: Montsserat; font-weight: 600;  color: #fff">Você é única e suas jóias também!
+                        <h1 class="lineHeightMob" style="font-family: Montsserat; font-weight: 600;  color: #fff">Você é
+                            única e suas jóias também!
                         </h1>
-                        <p style="color: #fff; font-family: Montsserat;">Buscando resgatar a exclusividade e singularidade, a Madame Valentim
+                        <p style="color: #fff; font-family: Montsserat;">Buscando resgatar a exclusividade e
+                            singularidade, a Madame Valentim
                             aposta na minuciosidade
                             do handmade.
                             <br><br>
@@ -99,7 +105,7 @@
                             Saiba mais </v-btn>
                     </v-col>
                     <v-col cols="12" md="4">
-                        <v-img  v-if="intBreakPoint > 2" class="imgFloat" width="340" src="../assets/img7.webp"></v-img>
+                        <v-img v-if="intBreakPoint > 2" class="imgFloat" width="340" src="../assets/img7.webp"></v-img>
                     </v-col>
                 </v-row>
             </v-col>
@@ -116,7 +122,8 @@
                         width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-                        <p style="font-family: Montsserat; font-weight: 400;  color: #000">R. Apucarana, 272 - Tatuapé, São Paulo - SP, 03311-000</p>
+                    <p style="font-family: Montsserat; font-weight: 400;  color: #000">R. Apucarana, 272 - Tatuapé, São
+                        Paulo - SP, 03311-000</p>
                 </div>
             </v-col>
             <v-col cols="12" md="7" class="alinhadoM">
@@ -167,7 +174,7 @@ export default {
     data: () => ({
         dialog: false,
         snackbar: false,
-         text: "Seu contato foi enviado! Obriado por sua mensagem, responderemos em breve.",
+        text: "Seu contato foi enviado! Obriado por sua mensagem, responderemos em breve.",
         img: [
             { img: "aliancasSolitarios.webp" },
             { img: "img1.webp" },
@@ -234,18 +241,17 @@ export default {
 
 <style scoped>
 @media (min-device-width: 360px) and (max-device-width: 640px) {
-    .lineHeightMob{
+    .lineHeightMob {
         line-height: 1 !important;
     }
-    
-    .formatTextMob{
 
-    }
+    .formatTextMob {}
 
-    .padMobile{
+    .padMobile {
         padding: 30px 15px !important;
     }
-    .offset-8{
+
+    .offset-8 {
         margin-left: 0 !important;
     }
 
@@ -267,7 +273,7 @@ export default {
     /* background-image: url("../assets/bgcCard.webp") !important; */
     background-color: #D7B167;
     background-repeat: no-repeat;
-    box-shadow: 3px 5px 5px -1px rgba(0,0,0,0.42);
+    box-shadow: 3px 5px 5px -1px rgba(0, 0, 0, 0.42);
     background-size: cover;
     /* background-attachment: fixed; */
     background-position: center;
