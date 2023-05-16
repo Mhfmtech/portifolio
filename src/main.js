@@ -1,15 +1,32 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import vuetify from './plugins/vuetify'
-import { VueMaskDirective } from 'v-mask'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import VueMask from '@devindex/vue-mask';
+import "vuetify/styles";
+import { createVuetify } from "vuetify";
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
+import AOS from "aos";
+import { Plugin } from "vue-responsive-video-background-player";
+import "vue-gifplayer/src/gif.css";
+import VScrollLock from "v-scroll-lock";
 
-Vue.directive('mask', VueMaskDirective);
+// Vue.directive('in-viewport', inViewportDirective)
 
-Vue.config.productionTip = false
+import "aos/dist/aos.css";
+import '@mdi/font/css/materialdesignicons.css'
+const app = createApp(App);
 
-new Vue({
-  router,
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')
+const vuetify = createVuetify({
+	components,
+	directives,
+});
+
+app.use(VueMask);
+app.use(router);
+app.use(vuetify);
+// app.use(VueGifPlayer);
+AOS.init();
+app.use(VScrollLock);
+app.use(Plugin);
+app.mount("#app");
